@@ -48,27 +48,19 @@
   <footer class="footer" role="contentinfo"><div class="footer-inner"><div class="footer-left">Ajith Menezes</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="experience.html">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://www.linkedin.com/in/ajith-m-36b54a186" target="_blank" rel="noopener noreferrer">LinkedIn</a></li></ul></div></footer>
 
   <script>
-    (()=>{const t=document.querySelector(".theme-toggle");const h=document.documentElement;function s(m){h.setAttribute("data-theme",m);localStorage.setItem("theme",m);t.innerHTML=m==="dark"?"\u{1F319}":"\u{2600}\u{FE0F}"}s(localStorage.getItem("theme")||"dark");t.addEventListener("click",()=>{s(h.getAttribute("data-theme")==="dark"?"light":"dark")})})();
     (()=>{
   const toggle = document.querySelector(".menu-toggle");
   const overlay = document.querySelector(".nav-overlay");
   const body = document.body;
-  const navLinks = document.querySelector(".nav-links");
 
   function openNav(){
     body.classList.add("nav-open");
-    toggle.setAttribute("aria-expanded","true");
-    overlay.style.opacity = "1";
-    overlay.style.pointerEvents = "auto";
-    navLinks.style.right = "0";
+    if(toggle) toggle.setAttribute("aria-expanded","true");
   }
 
   function closeNav(){
     body.classList.remove("nav-open");
-    toggle.setAttribute("aria-expanded","false");
-    overlay.style.opacity = "0";
-    overlay.style.pointerEvents = "none";
-    navLinks.style.right = "-100%";
+    if(toggle) toggle.setAttribute("aria-expanded","false");
   }
 
   if(toggle) toggle.addEventListener("click", () => {
