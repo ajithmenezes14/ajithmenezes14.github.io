@@ -41,7 +41,7 @@
   </main>
 
   <section class="open-bar"><p>Available for senior leadership conversations in analytics, AI transformation &amp; commercial intelligence.</p></section>
-  <footer class="footer" role="contentinfo"><div class="footer-inner"><div class="footer-left">Ajith Menezes</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="experience.html">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://www.linkedin.com/in/ajithmenezes14/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li></ul></div></footer>
+  <footer class="footer" role="contentinfo"><div class="footer-inner"><div class="footer-left">Ajith Menezes</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="experience.html">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://www.linkedin.com/in/ajith-m-36b54a186/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li></ul></div></footer>
 
   <script>
     (()=>{const t=document.querySelector(".theme-toggle");const h=document.documentElement;function s(m){h.setAttribute("data-theme",m);localStorage.setItem("theme",m);t.innerHTML=m==="dark"?"\u{1F319}":"\u{2600}\u{FE0F}"}s(localStorage.getItem("theme")||"dark");t.addEventListener("click",()=>{s(h.getAttribute("data-theme")==="dark"?"light":"dark")})})();
@@ -51,15 +51,41 @@
 
 
 <script>
-(function(){var s=document.getElementById("splash");if(s){setTimeout(function(){s.classList.add("hide");setTimeout(function(){s.remove()},600)},1500)}})();
-(function(){var cb=document.querySelector(".nav-close-btn");if(cb){cb.addEventListener("click",function(){document.body.classList.remove("nav-open");var mt=document.querySelector(".menu-toggle");if(mt)mt.setAttribute("aria-expanded","false")})}document.querySelectorAll(".nav-links a").forEach(function(l){l.addEventListener("click",function(){document.body.classList.remove("nav-open")})})})();
-(function(){if(window.matchMedia("(hover:none)").matches||window.innerWidth<769)return;var dot=document.createElement("div");dot.className="cursor-dot";var ring=document.createElement("div");ring.className="cursor-ring";document.body.appendChild(dot);document.body.appendChild(ring);var mx=0,my=0,dx=0,dy=0;document.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.transform="translate("+(mx-4)+"px,"+(my-4)+"px)"},{ passive:true});function anim(){dx+=(mx-dx)*.12;dy+=(my-dy)*.12;ring.style.transform="translate("+(dx-18)+"px,"+(dy-18)+"px)";requestAnimationFrame(anim)}anim();document.querySelectorAll("a,button,.btn-primary,.btn-outline,.nav-cta,.explore-card,.work-link").forEach(function(el){el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover")});el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover")})})})();
-(function(){var bar=document.createElement("div");bar.className="scroll-progress";document.body.appendChild(bar);window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h)*100:0)+"%"},{passive:true})})();
-(function(){var ov=document.createElement("div");ov.className="page-transition";document.body.appendChild(ov);document.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)return;var h=a.getAttribute("href");if(!h||a.hasAttribute("target")||h.startsWith("http")||h.startsWith("mailto:")||h.startsWith("tel:")||h.startsWith("#")||!h.endsWith(".html"))return;e.preventDefault();ov.classList.add("active");setTimeout(function(){window.location.href=h},350)})})();
-(function(){if(window.matchMedia("(hover:none)").matches)return;document.querySelectorAll(".btn-primary,.btn-outline,.nav-cta").forEach(function(b){b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.3)+"px,"+((e.clientY-r.top-r.height/2)*.3)+"px)"});b.addEventListener("mouseleave",function(){b.style.transform="translate(0,0)"})})})();
-(function(){if(window.matchMedia("(hover:none)").matches)return;document.querySelectorAll(".impact-card,.mandate-card,.explore-card,.work-card,.feat-card,.cert-card").forEach(function(c){c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5;var y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+(x*8)+"deg) rotateX("+(-y*8)+"deg) translateY(-6px)";c.style.boxShadow="var(--shadow-glow)"});c.addEventListener("mouseleave",function(){c.style.transform="";c.style.boxShadow=""})})})();
-(function(){var f=document.createElement("a");f.className="fab-contact";f.href="contact.html";f.setAttribute("aria-label","Contact me");f.innerHTML='&#9993;<span class="fab-tooltip">Get in Touch</span>';document.body.appendChild(f)})();
-(function(){var b=document.createElement("button");b.className="back-to-top";b.innerHTML="&#8593;";b.setAttribute("aria-label","Back to top");document.body.appendChild(b);window.addEventListener("scroll",function(){b.classList.toggle("visible",window.scrollY>300)},{passive:true});b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})})})();
-(function(){[{p:"og:title",c:"Ajith Menezes | Decision Systems Leader"},{p:"og:description",c:"Senior Director, Decision Systems & Revenue Analytics at Publicis Groupe."},{p:"og:type",c:"website"},{p:"twitter:card",c:"summary"},{p:"twitter:title",c:"Ajith Menezes | Decision Systems Leader"}].forEach(function(m){if(!document.querySelector('meta[property="'+m.p+'"]')&&!document.querySelector('meta[name="'+m.p+'"]')){var t=document.createElement("meta");t.setAttribute(m.p.startsWith("og:")?"property":"name",m.p);t.setAttribute("content",m.c);document.head.appendChild(t)}})})();
+/* Splash */
+!function(){var s=document.getElementById("splash");s&&setTimeout(function(){s.classList.add("hide");setTimeout(function(){s.remove()},600)},1500)}();
+
+/* Nav close */
+!function(){
+  var body=document.body,mt=document.querySelector(".menu-toggle");
+  function close(){body.classList.remove("nav-open");var n=document.querySelector(".nav");if(n)n.classList.remove("nav-open");if(mt)mt.setAttribute("aria-expanded","false")}
+  var cb=document.querySelector(".nav-close-btn");if(cb)cb.addEventListener("click",function(e){e.stopPropagation();close()});
+  var ov=document.querySelector(".nav-overlay");if(ov)ov.addEventListener("click",close);
+  var links=document.querySelectorAll(".nav-links a");for(var i=0;i<links.length;i++)links[i].addEventListener("click",close);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+}();
+
+/* Cursor */
+!function(){if(matchMedia("(hover:none)").matches||innerWidth<769)return;var d=document.createElement("div"),r=document.createElement("div");d.className="cursor-dot";r.className="cursor-ring";document.body.appendChild(d);document.body.appendChild(r);var mx=0,my=0,dx=0,dy=0;document.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;d.style.transform="translate("+(mx-4)+"px,"+(my-4)+"px)"},!0);!function a(){dx+=(mx-dx)*.12;dy+=(my-dy)*.12;r.style.transform="translate("+(dx-18)+"px,"+(dy-18)+"px)";requestAnimationFrame(a)}();var els=document.querySelectorAll("a,button");for(var i=0;i<els.length;i++){els[i].addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover")});els[i].addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover")})}}();
+
+/* Scroll progress */
+!function(){var b=document.createElement("div");b.className="scroll-progress";document.body.appendChild(b);addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-innerHeight;b.style.width=(h>0?(scrollY/h)*100:0)+"%"},!0)}();
+
+/* Page transition — ONLY relative .html links, never external */
+!function(){var o=document.createElement("div");o.className="page-transition";document.body.appendChild(o);document.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)return;var h=a.getAttribute("href");if(!h)return;if(a.target)return;if(h.indexOf("://")>-1)return;if(h.indexOf("mailto:")===0)return;if(h.indexOf("tel:")===0)return;if(h.charAt(0)==="#")return;if(h.slice(-5)!==".html")return;e.preventDefault();o.classList.add("active");setTimeout(function(){location.href=h},350)})}();
+
+/* Magnetic */
+!function(){if(matchMedia("(hover:none)").matches)return;var bs=document.querySelectorAll(".btn-primary,.btn-outline,.nav-cta");for(var i=0;i<bs.length;i++){(function(b){b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.3)+"px,"+((e.clientY-r.top-r.height/2)*.3)+"px)"});b.addEventListener("mouseleave",function(){b.style.transform=""})})(bs[i])}}();
+
+/* 3D tilt */
+!function(){if(matchMedia("(hover:none)").matches)return;var cs=document.querySelectorAll(".impact-card,.mandate-card,.explore-card,.work-card,.feat-card,.cert-card");for(var i=0;i<cs.length;i++){(function(c){c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+(x*8)+"deg) rotateX("+(-y*8)+"deg) translateY(-6px)";c.style.boxShadow="var(--shadow-glow)"});c.addEventListener("mouseleave",function(){c.style.transform="";c.style.boxShadow=""})})(cs[i])}}();
+
+/* FAB */
+!function(){var f=document.createElement("a");f.className="fab-contact";f.href="contact.html";f.setAttribute("aria-label","Contact");f.innerHTML='&#9993;<span class="fab-tooltip">Get in Touch</span>';document.body.appendChild(f)}();
+
+/* Back to top */
+!function(){var b=document.createElement("button");b.className="back-to-top";b.innerHTML="&#8593;";b.setAttribute("aria-label","Top");document.body.appendChild(b);addEventListener("scroll",function(){b.classList.toggle("visible",scrollY>300)},!0);b.addEventListener("click",function(){scrollTo({top:0,behavior:"smooth"})})}();
+
+/* OG meta */
+!function(){var m=[["og:title","Ajith Menezes | Decision Systems Leader"],["og:description","Senior Director, Decision Systems & Revenue Analytics at Publicis Groupe"],["og:type","website"],["twitter:card","summary"],["twitter:title","Ajith Menezes | Decision Systems Leader"]];for(var i=0;i<m.length;i++){if(!document.querySelector('meta[property="'+m[i][0]+'"]')&&!document.querySelector('meta[name="'+m[i][0]+'"]')) {var t=document.createElement("meta");t.setAttribute(m[i][0].slice(0,3)==="og:"?"property":"name",m[i][0]);t.content=m[i][1];document.head.appendChild(t)}}}();
 </script>
 </body></html>
