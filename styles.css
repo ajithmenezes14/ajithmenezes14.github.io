@@ -28,7 +28,7 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;position:relative;transition:background .5s ease,color .5s ease}
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.4}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
 [data-theme="light"] body::after{opacity:.15}
 ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
 ::selection{background:var(--accent);color:#fff}
@@ -333,4 +333,92 @@ to{opacity:1}}
 @media (max-width: 1024px) {
   .mandate-grid,.impact-grid,.feat-grid,.cert-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+
+/* ============================================================
+   MOBILE NAV FIX — Redesigned for reliability
+   ============================================================ */
+@media(max-width:768px){
+  /* Ensure nav panel is fully visible and interactive */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--bg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 80px 36px 40px;
+    transition: right .4s cubic-bezier(.22,1,.36,1);
+    border-left: 1px solid var(--border);
+    z-index: 9000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-open .nav-links {
+    right: 0;
+  }
+  .nav-links li {
+    list-style: none;
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    color: var(--text-heading);
+    border-bottom: 1px solid var(--border);
+    text-transform: uppercase;
+    transition: color .3s;
+  }
+  .nav-links a::after {
+    display: none;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent);
+  }
+  /* Nav CTA in mobile menu */
+  .nav-links .nav-cta {
+    margin-top: 20px;
+    display: inline-flex;
+    padding: 12px 28px;
+    border-bottom: none;
+    font-size: .85rem !important;
+    color: #fff !important;
+  }
+  /* Overlay */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 8000;
+    cursor: pointer;
+  }
+  .nav-open .nav-overlay {
+    display: block;
+  }
+  /* Menu toggle */
+  .menu-toggle {
+    display: flex;
+    z-index: 9500;
+    position: relative;
+  }
+  /* Hide desktop CTA from nav-actions on mobile */
+  .nav-actions .nav-cta {
+    display: none;
+  }
+  /* Move CTA into nav-links on mobile via the HTML (already there) */
 }
