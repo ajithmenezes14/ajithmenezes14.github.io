@@ -98,4 +98,13 @@ function askChat(q){addMsg(q,"user");document.getElementById("chatSuggestions").
 function sendChat(){var i=document.getElementById("chatInput"),q=i.value.trim();if(!q)return;i.value="";askChat(q)}
 document.getElementById("chatInput").addEventListener("keydown",function(e){if(e.key==="Enter")sendChat()});
 </script>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" aria-label="Mobile navigation">
+    <a href="index.html" class="tab-item" aria-label="Home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 10v9a1 1 0 001 1h3v-5a1 1 0 011-1h4a1 1 0 011 1v5h3a1 1 0 001-1v-9"/></svg><span>Home</span></a>
+    <a href="about.html" class="tab-item active" aria-current="page" aria-label="About"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21c0-3.87-3.58-7-8-7s-8 3.13-8 7"/></svg><span>About</span></a>
+    <a href="experience.html" class="tab-item" aria-label="Experience"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg><span>Experience</span></a>
+    <a href="projects.html" class="tab-item" aria-label="Projects"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><span>Projects</span></a>
+    <a href="contact.html" class="tab-item" aria-label="Contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg><span>Contact</span></a>
+  </nav>
 </body></html>

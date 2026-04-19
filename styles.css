@@ -299,3 +299,173 @@ body.cursor-hover .cursor-dot{transform:scale(2.5);opacity:.6}
 
 .cmd-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:100000;opacity:0;visibility:hidden;transition:all .25s ease;display:flex;align-items:flex-start;justify-content:center;padding-top:18vh}.cmd-overlay.open{opacity:1;visibility:visible}.cmd-box{background:var(--bg-alt);border:1px solid var(--border-light);border-radius:16px;width:560px;max-width:92vw;box-shadow:0 20px 60px rgba(0,0,0,.5);transform:translateY(-20px) scale(.96);transition:transform .25s cubic-bezier(.22,1,.36,1);overflow:hidden}.cmd-overlay.open .cmd-box{transform:translateY(0) scale(1)}.cmd-input-wrap{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border);gap:12px}.cmd-input-wrap svg{width:20px;height:20px;stroke:var(--text-dim);flex-shrink:0}.cmd-input{flex:1;background:none;border:none;color:var(--text-heading);font-size:1rem;font-family:var(--font-body);outline:none}.cmd-input::placeholder{color:var(--text-dimmer)}.cmd-kbd{font-size:.65rem;color:var(--text-dimmer);background:var(--toggle-bg);border:1px solid var(--border);padding:2px 8px;border-radius:4px}.cmd-results{max-height:340px;overflow-y:auto;padding:8px}.cmd-item{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:10px;cursor:pointer;transition:background .15s;text-decoration:none;color:var(--text)}.cmd-item:hover,.cmd-item.active{background:var(--accent-glow)}.cmd-item-icon{width:36px;height:36px;border-radius:8px;background:var(--toggle-bg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}.cmd-item:hover .cmd-item-icon{background:var(--accent);color:#fff}.cmd-item-text h4{font-size:.85rem;font-weight:600;color:var(--text-heading);margin-bottom:2px}.cmd-item-text p{font-size:.72rem;color:var(--text-dim)}.cmd-empty{text-align:center;padding:32px;color:var(--text-dimmer);font-size:.85rem}.cmd-footer{display:flex;justify-content:center;gap:16px;padding:10px;border-top:1px solid var(--border);font-size:.65rem;color:var(--text-dimmer)}
 .chat-widget{position:fixed;bottom:28px;left:28px;z-index:9999}.chat-toggle{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--accent-2),var(--accent));color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 4px 20px rgba(123,97,255,.4);transition:all var(--transition)}.chat-toggle:hover{transform:scale(1.08)}.chat-toggle .chat-close{display:none}.chat-widget.open .chat-toggle .chat-open{display:none}.chat-widget.open .chat-toggle .chat-close{display:block}.chat-panel{position:absolute;bottom:66px;left:0;width:360px;max-width:calc(100vw - 40px);background:var(--bg-alt);border:1px solid var(--border-light);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(10px) scale(.95);transition:all .3s cubic-bezier(.22,1,.36,1);overflow:hidden}.chat-widget.open .chat-panel{opacity:1;visibility:visible;transform:translateY(0) scale(1)}.chat-header{background:linear-gradient(135deg,var(--accent-2),var(--accent));color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px}.chat-header-dot{width:10px;height:10px;border-radius:50%;background:#00D4AA;animation:chatPulse 2s infinite}@keyframes chatPulse{0%,100%{opacity:1}50%{opacity:.4}}.chat-header h4{font-size:.88rem;font-weight:600}.chat-header p{font-size:.68rem;opacity:.8}.chat-messages{height:300px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}.chat-msg{max-width:85%;padding:10px 14px;border-radius:12px;font-size:.82rem;line-height:1.6;animation:msgIn .3s ease}@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.chat-msg.bot{background:var(--bg-glass);border:1px solid var(--border);align-self:flex-start;border-bottom-left-radius:4px}.chat-msg.user{background:var(--accent);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}.chat-msg.typing span{display:inline-block;width:6px;height:6px;background:var(--text-dim);border-radius:50%;margin:0 2px;animation:typDot 1.4s infinite}.chat-msg.typing span:nth-child(2){animation-delay:.2s}.chat-msg.typing span:nth-child(3){animation-delay:.4s}@keyframes typDot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}.chat-suggestions{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px}.chat-suggestions button{background:var(--toggle-bg);border:1px solid var(--border);color:var(--text-dim);font-size:.7rem;padding:5px 12px;border-radius:20px;cursor:pointer;transition:all .2s;font-family:var(--font-body)}.chat-suggestions button:hover{background:var(--accent-glow);border-color:var(--accent);color:var(--accent)}.chat-input-wrap{display:flex;padding:12px 16px;border-top:1px solid var(--border);gap:8px}.chat-input{flex:1;background:var(--toggle-bg);border:1px solid var(--border);color:var(--text);font-size:.82rem;padding:10px 14px;border-radius:10px;outline:none;font-family:var(--font-body)}.chat-input:focus{border-color:var(--accent)}.chat-send{width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem}@media(max-width:768px){.chat-widget{bottom:20px;left:20px}.chat-toggle{width:48px;height:48px}.chat-panel{width:calc(100vw - 40px)}}
+
+
+/* =======================================================================
+   MOBILE BOTTOM TAB BAR — World-Class Navigation Redesign
+   Replaces hamburger menu with a persistent bottom tab bar on mobile.
+   ======================================================================= */
+
+/* ---------- Tab‑bar base (hidden on desktop) ---------- */
+.mobile-tab-bar{
+  display:none;
+}
+
+/* ---------- Mobile overrides (≤ 768 px) ---------- */
+@media(max-width:768px){
+
+  /* ---- Show the tab bar ---- */
+  .mobile-tab-bar{
+    display:flex;
+    position:fixed;
+    bottom:0;left:0;right:0;
+    z-index:10000;
+    height:68px;
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    background:var(--nav-bg);
+    backdrop-filter:blur(28px) saturate(1.4);
+    -webkit-backdrop-filter:blur(28px) saturate(1.4);
+    border-top:1px solid var(--border);
+    justify-content:space-around;
+    align-items:center;
+    transition:background var(--transition);
+  }
+
+  /* ---- Individual tab ---- */
+  .tab-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    flex:1;
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent;
+    position:relative;
+    padding:8px 0 4px;
+    transition:color var(--transition-fast),transform .15s ease;
+    color:var(--text-dimmer);
+  }
+
+  .tab-item svg{
+    width:22px;height:22px;
+    stroke-width:1.8;
+    transition:color var(--transition-fast),transform .2s ease;
+  }
+
+  .tab-item span{
+    font-family:var(--font-body);
+    font-size:.6rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    transition:color var(--transition-fast);
+  }
+
+  /* ---- Active state ---- */
+  .tab-item.active{
+    color:var(--accent);
+  }
+
+  /* Glowing top indicator for active tab */
+  .tab-item.active::before{
+    content:'';
+    position:absolute;
+    top:-1px;
+    left:50%;
+    transform:translateX(-50%);
+    width:28px;
+    height:3px;
+    border-radius:0 0 3px 3px;
+    background:var(--accent);
+    box-shadow:0 2px 12px rgba(79,125,247,.5),0 0 20px rgba(79,125,247,.2);
+    animation:tabIndicatorIn .35s cubic-bezier(.22,1,.36,1) both;
+  }
+
+  @keyframes tabIndicatorIn{
+    0%{width:0;opacity:0}
+    100%{width:28px;opacity:1}
+  }
+
+  /* Active tab icon slight bounce */
+  .tab-item.active svg{
+    transform:translateY(-1px);
+  }
+
+  /* Soft glow behind active icon */
+  .tab-item.active::after{
+    content:'';
+    position:absolute;
+    top:4px;
+    left:50%;
+    transform:translateX(-50%);
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--accent-glow);
+    z-index:-1;
+    opacity:.7;
+    pointer-events:none;
+  }
+
+  /* ---- Hover / press states ---- */
+  .tab-item:hover{
+    color:var(--text-dim);
+  }
+
+  .tab-item:active{
+    transform:scale(.88);
+  }
+
+  /* ---- Hide hamburger menu elements ---- */
+  .menu-toggle,
+  .nav-close-btn,
+  .nav-overlay{
+    display:none!important;
+  }
+
+  /* Hide the slide‑out nav‑links panel entirely */
+  .nav-links{
+    display:none!important;
+  }
+
+  /* ---- Simplified top nav: logo + theme toggle only ---- */
+  .nav-inner{
+    height:56px;
+  }
+
+  .nav-actions{
+    gap:10px;
+  }
+
+  /* ---- Hide FAB contact — contact lives in the tab bar ---- */
+  .fab-contact{
+    display:none!important;
+  }
+
+  /* ---- Reposition back‑to‑top above tab bar ---- */
+  .back-to-top{
+    bottom:calc(80px + env(safe-area-inset-bottom,0px));
+    right:16px;
+    width:38px;height:38px;
+  }
+
+  /* ---- Reposition chat widget above tab bar ---- */
+  .chat-widget{
+    bottom:calc(78px + env(safe-area-inset-bottom,0px));
+    left:16px;
+  }
+  .chat-toggle{
+    width:48px;height:48px;
+  }
+
+  /* ---- Body padding so content isn't hidden behind tab bar ---- */
+  body{
+    padding-bottom:calc(68px + env(safe-area-inset-bottom,0px));
+  }
+
+  /* ---- Footer extra bottom margin for tab bar ---- */
+  .footer{
+    padding-bottom:calc(50px + env(safe-area-inset-bottom,0px));
+  }
+}
